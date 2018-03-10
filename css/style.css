@@ -60,7 +60,7 @@ a {
 /*----------------------Header----------------------*/
 
 .main-header {
-/*	min-height: 854px;*/
+	height: 854px;
 
 	background: #1f2934 url(../img/background.jpg) no-repeat 50% 0;
 	background-size: 100% 100%;
@@ -145,7 +145,7 @@ a {
 /*----------------------Intro----------------------*/
 
 .intro {
-	width: 300px;
+	width: 305px;
 	
 	padding: 108px 0 120px;
 }
@@ -194,7 +194,7 @@ a {
 	flex-wrap: wrap;
 	
 	margin: 0;
-	margin-bottom: 58px;
+	margin-bottom: 55px;
 	padding: 0;
 	
 	line-height: 0;
@@ -211,14 +211,13 @@ a {
 
 .app-info {
 	display: block;
-	margin-left: 2px;
 	
+	color: #fff;
 	line-height: 26px;
 	font-weight: 300;	
 	text-align: center;
 }
 /*----------------------Main----------------------*/
-
 
 /*----------------------Features----------------------*/
 .features {
@@ -326,7 +325,7 @@ a {
 	left: 50%;
 	transform: translateX(-50%);	
 	
-	background: url(..//img/quote.svg) no-repeat;
+	background: url(..//img/quotes.svg) no-repeat;
 }
 
 .feedback-list {
@@ -423,7 +422,7 @@ a {
 .prices {
 	height: 533px; /*временно*/
 	box-sizing: border-box;
-	padding-top: 154px;
+	padding-top: 148px;
 	
 	background: #fff url(..//img/triangle-2.svg) no-repeat center 0;
 	background-size: 100% 100%;
@@ -473,13 +472,13 @@ a {
 }
 
 .price-table td {
+	position: relative;
 	width: 233px;
 	height: 60px;
 	
 	box-sizing: border-box;
-
-	color: #283645;
 	
+	color: #283645;
 	border: 2px solid #e5e5e5;
 }
 
@@ -503,14 +502,57 @@ a {
 	border-bottom: 2px solid #e5e5e5;
 }
 
+.price-table .no-cell::before,
+.price-table .yes-cell::before {
+	content: "";
+	position: absolute;
+	
+	width: 27px;
+	height: 27px;
+	
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
 
+.price-table .no-cell::before {
+	background: url(../img/no.svg) no-repeat;
+}
 
+.price-table .yes-cell::before {
+	background: url(../img/yes.svg) no-repeat;
+}
 
+/*----------------------Contacts----------------------*/
 
+.contacts {
+	height: 870px; /*временно*/
+	box-sizing: border-box;
+	padding-top: 60px;
+	
+	background-color: #fff;
+}
 
+.contacts-info {
+	margin: 0 0 40px;
+	padding: 0 220px;
+	
+	font-size: 50px;
+	line-height: 60px;
+	font-weight: 300;
+	text-align: center;
+}
 
+.contacts-wrapper {
+	display: flex;
+	justify-content: space-between;
+}
 
-
+.contacts-box {
+	width: 245px;
+	
+	text-align: center;
+}
 
 
 
