@@ -60,7 +60,7 @@ a {
 /*----------------------Header----------------------*/
 
 .main-header {
-	height: 854px;
+	min-height: 854px;
 
 	background: #1f2934 url(../img/background.jpg) no-repeat 50% 0;
 	background-size: 100% 100%;
@@ -84,21 +84,26 @@ a {
 	
 	margin-right: auto;
 }
+.main-logo:hover .img-pink,
+.main-logo:focus .img-pink {
+	fill: #d22856;
+	
+	transition: 0.2s;
+}
 
-.main-logo:hover::after,
-.main-logo:focus::after {
-	content: url(../img/main-logo-hvr.png);
+.main-logo:hover .img-white,
+.main-logo:focus .img-white {
+	fill: #fff;
 	
-	position: absolute;
-	width: 146px;
-	height: 40px;
-	
-	top: 0;
-	left: 0;
+	transition: 0.2s;
 }
 
 .main-logo:active {
 	opacity: 0.3;
+}
+
+.main-logo:active .img-pink {
+	fill: #fff;
 }
 
 .site-nav {
@@ -136,6 +141,8 @@ a {
 	width: 100%;
 	height: 2px;
 	background-color: #fff;
+	
+	transition: 0.2s;
 }
 
 .site-nav-item a:active {
@@ -181,6 +188,8 @@ a {
 	color: #d22856;
 	
 	background-color: #fff;
+	
+	transition: 0.2s;
 }
 
 .download-btn:active {
@@ -303,7 +312,7 @@ a {
 
 .feedbacks {
 	position: relative;
-	height: 406px; /*временно*/
+	min-height: 406px; /*временно*/
 	box-sizing: border-box;
 	
 	padding-top: 186px;
@@ -420,9 +429,9 @@ a {
 
 
 .prices {
-	height: 533px; /*временно*/
+	min-height: 533px; /*временно*/
 	box-sizing: border-box;
-	padding-top: 148px;
+	padding-top: 155px;
 	
 	background: #fff url(..//img/triangle-2.svg) no-repeat center 0;
 	background-size: 100% 100%;
@@ -526,16 +535,17 @@ a {
 /*----------------------Contacts----------------------*/
 
 .contacts {
-	height: 870px; /*временно*/
+	min-height: 870px; /*временно*/
 	box-sizing: border-box;
-	padding-top: 60px;
+	padding-top: 65px;
 	
 	background-color: #fff;
 }
 
 .contacts-info {
-	margin: 0 0 40px;
+	margin: 0;
 	padding: 0 220px;
+	margin-bottom: 52px;
 	
 	font-size: 50px;
 	line-height: 60px;
@@ -543,17 +553,196 @@ a {
 	text-align: center;
 }
 
-.contacts-wrapper {
+.contacts-list {
 	display: flex;
 	justify-content: space-between;
+	
+	margin: 0;
+	
+	padding: 0;
+	
+	list-style: none;
 }
 
-.contacts-box {
-	width: 245px;
+.contacts-item {
+	width: 300px;
 	
 	text-align: center;
 }
 
+.contacts-text {
+	display: block;
+	
+	margin-bottom: 20px;
 
+	font-weight: 700;
+}
 
+.contacts-item .pink-text {
+	font-size: 24px;
+	line-height: 28px;
+	font-weight: 300;
+	color: #d22856;
+}
 
+.contact-email:hover,
+.contact-email:focus {
+	color: #283645;
+	
+	border-bottom: 2px solid #283645;
+	
+	transition: 0.2s;
+}
+
+.contact-email:active {
+	opacity: 0.3;
+	border: none;
+}
+
+.map {
+	position: relative;
+	height: 520px;
+	
+	background: url(../img/map.jpg) no-repeat 50% bottom;
+	background-size: cover;
+}
+
+.map::before {
+	content: "";
+	position: absolute;
+	
+	width: 100%;
+	height: 123px;
+	
+	top: 0;
+	left: 0;
+	
+	background-image: url(../img/triangle-map.svg);
+	background-repeat: no-repeat;
+}
+
+.map::after {
+	content: "";
+	position: absolute;
+	
+	top: 286px;
+  left: 742px;
+	
+	width: 15px;
+	height: 15px;
+	
+	background-color: #d22856;
+	border: 10px solid #fff;
+	border-radius: 50%;
+}
+
+/*----------------------Footer----------------------*/
+	
+.main-footer {
+	padding: 70px 0 87px;
+}
+
+.main-footer .container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.footer-logo {
+	width: 150px;
+	margin-right: 70px;
+}
+
+.footer-logo:hover path,
+.footer-logo:focus path {
+	fill: #283645;
+	
+	transition: 0.2s;
+}
+
+.footer-logo:active path {
+	fill: rgba(40,54,69,0.3);
+}
+
+/*----------------------Footer-Social----------------------*/
+
+.footer-social {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	width: 500px;
+	
+	margin: 0;
+	padding: 0;
+	
+	list-style: none;
+}
+
+.footer-item {
+	margin-right: 12px;
+}
+
+.footer-item:last-child {
+	margin-right: 0;
+}
+
+.social-btn {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	width: 45px;
+	height: 45px;
+	
+	border: 3px solid rgba(40,54,69,0.1);
+	border-radius: 50%;
+}
+
+.social-btn:hover,
+.social-btn:focus {
+	border: 3px solid rgba(40,54,69,1);
+	
+	transition: 0.2s;
+}
+
+.social-btn:active {
+	border: 3px solid rgba(40,54,69,0.1);
+}
+
+.social-btn:active path {
+	fill: rgba(210,40,86,0.3);
+}
+
+/*----------------------Footer-Copyright----------------------*/
+
+.footer-copyright {
+	display: flex;
+	align-items: center;
+	width: 220px;
+	
+	box-sizing: border-box;
+	
+	padding-left: 13px;
+}
+
+.glukhanko-logo {
+	margin: 0 12px;
+}
+
+.htmlacademy-logo {
+	margin-left: 14px;
+}
+
+.glukhanko-logo:hover path,
+.htmlacademy-logo:hover path,
+.glukhanko-logo:focus path,
+.htmlacademy-logo:focus path {
+	fill: #283645;
+	
+	transition: 0.2s;
+}
+
+.glukhanko-logo:active path,
+.htmlacademy-logo:active path {
+	opacity: 0.3;
+}
