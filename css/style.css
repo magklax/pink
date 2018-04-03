@@ -415,7 +415,6 @@ a {
 #feedback-1:checked ~ .feedback-list .feedback-item:nth-child(1) .feedback-text,
 #feedback-2:checked ~ .feedback-list .feedback-item:nth-child(2) .feedback-text,
 #feedback-3:checked ~ .feedback-list .feedback-item:nth-child(3) .feedback-text {
-	
 	animation-duration: 2s;
   animation-name: show; 
 }
